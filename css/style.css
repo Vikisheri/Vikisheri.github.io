@@ -1,0 +1,230 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    position: relative;
+    height:120px;
+}
+nav {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    /*первие 3 позиции отвечают за фиксиривание мню, 
+    class вибирался родной nav которий отвечает за навигиционное меню*/
+    
+    height: 50px; /* если вдруг шапка профиля виходит за предели то ми от висоти  шапки отнимаем значение на сколько пикселеей она виходить,напр53-7=46-етои будет наша висота   */
+    background: #212121; /*ширину не пишем она определяется авто*/
+
+}
+.memu {
+    display: flex;
+    justify-content: space-between; /*для того чтоби вировнять меню, а первая сточка определяет благодарю флекс боксу ми ето делаем, вторая строчка без первой не работает */
+    padding: 10px 70px;
+    margin: 0 ;
+    list-style-type: none;
+     /*ето отвечает за нумирацию меню, если не хотим , то все равно прописуем код, но ставим в конце * ноне *- что означает без*/
+}
+.menu .menu_link{
+    font-weight: 300; /*- отвечает за широкость текста*/
+   font-size: 15px; /* - размер текста*/
+   color: #FFFFFF;
+   
+   
+}
+
+.menu .memu_item {
+    border-right: 2px dotted rgb(4, 4, 4); /*- у етого значения может бить 4 сторони рх,у нас например одна, доттед-ето точечний елемент, "I" разделитель*/
+    padding-right: 30px; /* етот елемент помагает нам сдвинуть наш разделитель"І" в право*/
+   
+
+}  
+
+
+.subheader{
+    height: 87px;
+    background: rgba(0, 0, 0, .6);  /*- ето значение дает прозрачность header */
+    position: absolute;
+    width: 100%;
+    margin-top: 33px;
+    
+    
+
+
+    /* ЧТОБИ СДЕЛАТЬ ШАПКУ ПРОЗРАЧНОЙ ТО ЕСТЬ " ЗАХОДИТ  НА КАРТИНКУ КАК В МАКЕТЕ" 
+    1. НУЖНО У РОДИТЕЛЯ HEADER ДАТЬ position:relative- ОПОРНА ТОЧКА 
+    2.А У ПОД-РОДИТЕЛЯ ИЛИ СЛЕДУЮЩИЙ DIV(СМОТРЕТЬ ПО СТРУКТУРЕ) В НАШЕМ СЛУЧАЕ ПОД-РОДИТЕЛЬ subheader
+     ДАТЬ position: absolute;МОЖЕМО РОСПОЛАГАТЬ В ЛЮБОМ МЕСТЕ СТРАНИЦИ
+      И ОБЯЗАТЕЛЬНО ШИРИНА -width: 100%; РАСТЯГУЕТ НАШУ КАРТИНКУ*/
+
+}
+.subheader .subheader_logo{
+  display: block;
+    max-width: 100px; /* меняем ширину на 100% в мерах нашей колонки которую ми создавали в col */
+    margin-top: 25px; /* тут margin-top - ето отсткп сверху которий без display: block; работать не будет  */
+}
+
+.subheader .subheader_offical{
+    font-weight: 100;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+
+.subheader .subheader_call{
+    display: block;
+    margin-top: 30px;
+    text-align: right;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: right;
+}
+
+.subheader .subheader_phone{
+    display: block;
+    margin-top: 8px;
+    line-height: 12px; /*отвечает за то что елемент пойдет вверх или вниз*/
+    font-weight: 400;
+    font-size: 22px;
+    text-align: right; /* виравнивает елементи по правоц стороне на странице звоните нам каждий день и ном тел по дней по праваой стороне без дисплей блок не работает*/
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.subheader .subheader_btn{ 
+    display: block;
+    margin-top: 30px;
+    width: 172px;
+    height: 46px;
+    background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+    box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+    border: none;
+    border-radius: 4px;
+
+    /* for text inside buttom*/
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+text-transform: uppercase;
+color: #FFFFFF;
+text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
+
+
+
+
+
+
+
+
+.promo{
+display:block;
+min-height: 800px;
+background:url("../img/uber_pg.png") center center/cover no-repeat;
+padding: 150px 0 135px 0; /*150 ето верх а 135 низ*/ 
+}
+.promo .promo_header{
+
+font-size: 60px;
+font-weight: 900;
+line-height: 60px;
+text-transform: uppercase;
+color: #FFFFFF;
+text-align: center;
+}
+.promo .promo_subheader{
+font-size: 36px;
+font-weight: 700;
+line-height: 36px;
+text-transform: uppercase;
+color: #FFFFFF;
+margin: 0;
+margin-top: 22px;
+text-align: center; /*для текста по центру*/
+}
+
+.promo .promo_text{
+font-weight: 400;
+font-size: 18px;
+display: flex;
+line-height: 24px;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+margin-top: 16px;
+}
+
+.promo .promo_btn{
+display: block;
+margin: 116px auto 0 auto;
+width: 259px;
+height: 63px;
+background: linear-gradient(0deg, #1EACC7 0%, #4CE2FF 100%);
+box-shadow: inset 0px -4px 0px rgba(0, 0, 0, 0.12);
+border: none; /* провило спочатку бордер ноне, потім бордер і конкретні пікселі, допомогає зробити красиву кнопку*/
+border-radius: 4px;
+
+
+/* for text inside buttom*/
+font-weight: 400;
+font-size: 18px;
+text-transform: uppercase;
+color: #FFFFFF;
+text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21);
+}
+
+
+.reasons{
+    padding: 71px 0 65px 0;
+}
+
+.label{
+ display: block;
+ margin:auto;  /*ВИРАВНИВАЕТ ЕЛЕМЕНТ ПО ЦЕНТРУ*/ 
+width: 115px;
+height: 27px;
+padding: 5PX 12PX; /*ВИРАВНИВАЕТ ТЕСТ ВНУТРИ КНОАКИ МИ САМИ ЗАДАЕМ ОТСТУПИ*/
+background: #000000;
+font-weight: 400;
+font-size: 11px;
+text-transform: uppercase;
+color: #FFFFFF;
+}
+
+.title{
+   margin-bottom: 0;
+   margin-top: 38px;
+   color: #222222; 
+   font-size: 38px;
+   font-weight: 700;
+   text-align: center;
+    text-transform: uppercase;
+   
+} 
+/* font-weight: 700;  ВИЗНАЧАЄ НАСИЧЕНІСТЬ ШРИФТА*/
+/*line-height - примусова вистоа рядка*/
+/*align-items: center; виравнювання елементів всередині рядків контейнера*/
+
+.reasons .reasons_block{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 35px;
+}
+ 
+.reasons_block .reason_round{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 26px;
+width: 116px;
+height: 117px;
+background: #1EACC7;
+border-radius: none;
+border-radius:100%;
+}
+
+
+.reasons_block .reasons_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
